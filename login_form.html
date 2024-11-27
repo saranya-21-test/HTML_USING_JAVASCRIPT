@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+      function hello() {
+        const email=document.getElementById("email").value;
+        const psw=document.getElementById("psw").value;
+        const pswRepeat=document.getElementById("psw-repeat").value;
+
+        let greeting;
+        if (email.length > 0 && psw.length > 0 && pswRepeat.length > 0) {
+            alert("login successfully");
+        } else {
+            greeting = "Please check the details!";
+        }
+        document.getElementById("output").innerText=greeting;
+    }
+  </script>
+
+
+
+</head>
+<body>
+   <form >
+    <div class="container">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" class="form-control" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <hr>
+
+        <input type="button" class="btn btn-primary" onclick="hello();" name="ok" value="Click Me"/>
+    </div>
+   </form>
+
+    <div id="output" style="margin-top:20px;font-weight:bold;"></div>
+
+</body>
+</html>
